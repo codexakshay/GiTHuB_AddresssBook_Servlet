@@ -12,7 +12,7 @@ pageEncoding="ISO-8859-1"%>
 		{
 		String id = request.getParameter("id");
 		Class.forName("com.mysql.jdbc.Driver");
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container","root","");	
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container","root","@n0nyMizer*");	
 		Statement statement = con.createStatement();
 		String query = "DROP TABLE "+id+";";
 		statement.executeUpdate(query);

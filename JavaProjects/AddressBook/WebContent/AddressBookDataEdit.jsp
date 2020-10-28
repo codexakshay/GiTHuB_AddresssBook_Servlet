@@ -27,7 +27,7 @@
 		ResultSet rs;
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container","root","");
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container","root","@n0nyMizer*");
 		pst = con.prepareStatement("update address_book_container.address_book set last_name= ?,user_email= ?,mobile_number= ?,user_state= ?,user_city= ?,user_pincode= ?,user_street= ? where first_name = ?");
 
 		pst.setString(1, last_name);
