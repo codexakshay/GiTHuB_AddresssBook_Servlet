@@ -87,7 +87,7 @@
 					PreparedStatement pst;
 					ResultSet rs;
 					Class.forName("com.mysql.jdbc.Driver");
-					con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container", "root", "@n0nyMizer*");
+					con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container", "root", "");
 
 					String select_query = "select * from address_book_container." + Book_name + "where user_city ='"+City_name+"'";
 					Statement st = con.createStatement();
