@@ -20,7 +20,7 @@
 		ResultSet rs;
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container","root","@n0nyMizer*");
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container","root","");
 		pst = con.prepareStatement("insert into address_book_container.address_book(first_name,last_name,user_email,mobile_number,user_state,user_city,user_pincode,user_street)values(?,?,?,?,?,?,?,?)");
 		
 		pst.setString(1, first_name);
@@ -154,7 +154,7 @@
 														ResultSet rs;
 														
 														Class.forName("com.mysql.jdbc.Driver");
-														con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container","root","@n0nyMizer*");
+														con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container","root","");
 														
 														String select_query="select * from address_book_container.address_book";
 														Statement st = con.createStatement();
@@ -239,7 +239,7 @@
 														if(request.getParameter("viewAddressBook")!=null)
 														{
 														Class.forName("com.mysql.jdbc.Driver");
-														con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container","root","@n0nyMizer*");
+														con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container","root","");
 														
 														select_query="select * from address_book_container."+view+"";
 														st = con.createStatement();
