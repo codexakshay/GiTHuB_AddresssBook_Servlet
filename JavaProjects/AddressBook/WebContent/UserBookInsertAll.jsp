@@ -21,7 +21,7 @@ pageEncoding="ISO-8859-1"%>
 		PreparedStatement pst;
 		ResultSet rs;
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container", "root", "@n0nyMizer*");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container", "root", "");
 		Statement st=conn.createStatement();
 
 		int i=st.executeUpdate("insert into address_book_container."+id+"(first_name,last_name,user_email,mobile_number,user_state,user_city,user_pincode,user_street)values('"+first_name+"','"+last_name+"','"+user_email+"','"+mobile_number+"','"+user_state+"','"+user_city+"','"+user_pincode+"','"+user_street+"')");
