@@ -9,7 +9,7 @@
 		ResultSet rs;
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container","root","@n0nyMizer*");
+		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/address_book_container","root","");
 		pst = con.prepareStatement("delete from address_book_container.address_book where first_name = ?");
 		pst.setString(1, first_name);
 		pst.executeUpdate();
